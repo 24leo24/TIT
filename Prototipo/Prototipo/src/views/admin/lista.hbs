@@ -1,0 +1,28 @@
+<div class="container p-4"> 
+    <div class="row">
+
+        {{#each horas}}
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h3 class="card-title text-uppercase">
+                             {{nombre}}
+                        </h3>
+                        <p>{{horario}}</p>
+                        <p>{{disponibilidad}}</p>
+                        <a href="/admin/eliminar/{{id_hora}}" class="btn btn-danger">Eliminar</a>
+                        <a href="/admin/editar/{{id_hora}}" class="btn btn-secondary">Editar</a>
+                    </div>
+                </div>
+            </div>
+        {{else}}
+            <div class="col-md-4 mx-auto">
+                <div class="card card-body text-center">
+                    <p>No hay Horas de atencion medica</p>
+                    <a href="/admin/add">Genera Horas de atencion medica</a>
+                </div>
+            </div>
+        {{/each}}
+
+    </div>
+</div>
